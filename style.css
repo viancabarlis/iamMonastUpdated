@@ -1,0 +1,271 @@
+html,body {
+    width:100vw;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Calibri", serif;
+    overflow-x: hidden;
+}
+.navbar {
+    position: absolute;
+    width: 100vw;
+    height: 50px;
+    z-index: 1;
+}
+#logoword {
+    width: 120px;
+    height: auto;
+    padding-top: 1%;
+    padding-left: 5%;
+}
+.navOptions {
+    float: right;
+    display: inline-block;
+    padding-top: 2%;
+    padding-right: 5%;
+}
+.navOptions a {
+    color: black;
+    font-size: 14px;
+    padding-left: 20px;
+    text-decoration: none;
+}
+.navOptions a:hover {
+    color: hotpink;
+}
+
+h1 {
+    letter-spacing: 3px;
+    color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px maroon, 0 0 5px lightpink;
+}
+/**index page**/
+#textdiv {
+    position: fixed;
+    display: inline-block;
+    top: 70px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    padding: 10px;
+}
+
+#textdiv a {
+    letter-spacing: 2px;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+#textdiv a:hover {
+    text-decoration: underline;
+}
+#arthardware {
+    width: 400px;
+    height: auto;
+    animation: fadeInAnimation ease 2s;
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+} /*animation when page loads*/
+
+#videodiv {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    height: 60%;
+}
+#videoBG {
+    position: absolute;
+    z-index: -1;
+}  @media screen and (min-aspect-ratio: 16/9) { /*device aspect ratio*/
+    #videoBG, .rowAbout, #logoImage{
+        width:100%;
+        height: auto;
+    }
+}  @media screen and (max-aspect-ratio: 16/9) {
+    #videoBG, .rowAbout {
+        width: auto;
+        height: 100%;
+    }
+    .columnAbout { /**not done yet, have to figure out how to make columns flex when screen is smaller*/
+        flex: 50%
+    }
+}   @media screen and (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    .indexBody {
+        background: url('images/posterpinkink.PNG');
+        background-size: cover;
+    }
+    .columnRText {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+    .rowAbout {
+        flex-direction: column;
+    }
+    #aboutL, #aboutR {
+        width: 100%;
+    }
+
+
+} /**end of video background**/
+
+
+/****ABOUT US*********/
+.columnAbout {
+    float: left;
+    padding-top: 5%;
+}
+#aboutL {
+    padding-left: 10%;
+    width: 35%;
+}
+#aboutR {
+    padding-top: 8%;
+    padding-left: 50px;
+    width: 35%;
+}
+h3 {
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 0;
+    display: inline-block;
+}
+#wave {
+    transform: rotate(10deg);
+}
+h4, h5 {
+    letter-spacing: 2px;
+    font-size: large;
+    display: inline-block;
+}
+
+p, ol, ul {
+    letter-spacing: 1px;
+    top: 0;
+    margin-top: -15px;
+    margin-bottom: 40px;
+    text-decoration: none;
+}
+li {
+    margin-bottom: 10px;
+}
+.columnRText h4 img, .columnRText h3 img {
+    float: left;
+    display: inline-block;
+    align-items: center;
+}
+.columnRText img {
+    height: 25px;
+    width: auto;
+    z-index: 1;
+}
+.socialmediapack img {
+    margin-top: -15px;
+    padding-right: 5px;
+    animation: fadeInAnimation ease 3s;
+    height: 30px;
+    width: auto;
+}
+/* Clear floats after the columns */
+.rowAbout:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#logoImage {
+    height: 550px;
+    width: auto;
+    animation: fadeInAnimation ease 1s;
+}
+
+
+/*****COMMISSION PAGE*****/
+.commissionsText {
+    padding-top: 5%;
+    padding-left: 10%;
+    margin-right: 5%;
+}
+.commissionsText a {
+    text-decoration: none;
+    color:  #003399;
+}
+hr {
+    border: none;
+    border-top: 3px double   #bfbfbf;
+    color:   #bfbfbf;
+    overflow: visible;
+    height: 5px;
+    text-align: center;
+    width: 80%;
+    float: left;
+}
+
+hr:after {
+    background: #fff;
+    content: '§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+
+.commissionsText h4 img, .commissionsText h3 img {
+    float: left;
+    display: inline-block;
+    align-items: center;
+}
+.commissionColumn {
+    float: left;
+    width: 40%;
+    position: center;
+}
+.commissionsText h3, .commissionsText h4 {
+    letter-spacing: 2px;
+    font-size: x-large;
+    padding: 0;
+    display: inline-block;
+}
+.commissionsText img {
+    height: 25px;
+    width: auto;
+    z-index: 1;
+}
+/* Clear floats after the columns */
+.rowProcess:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.rowProcess {
+    margin-top: -50px;
+    width: 90%;
+}
+#buildServiceColumn, #ratesColumn {
+    padding-left: 5%;
+}
+
+/*button for commission*/
+#button {
+    float: inherit;
+    margin: 3%;
+    padding-bottom: 5%;
+}
+#button a {
+    color: #004d4d;
+    padding: 15px;
+    background-color: #ff1a8c;
+    border: 1px solid  #99004d;
+    border-radius: 8px;
+    font-weight: bold;
+}
+#button a:hover {
+    color: white;
+    background-color:  #e60073;
+}
